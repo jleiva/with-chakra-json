@@ -1,4 +1,6 @@
 import { Providers } from "./providers";
+import { Box, Link as ChakraLink } from '@chakra-ui/react'
+import Navigation from './components/Navigation';
 
 export const metadata = {
   title: 'Create Next App',
@@ -8,7 +10,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body><Providers>{children}</Providers></body>
+      <body>
+        <Providers>
+          <Box maxWidth="1200px" ml="auto" mr="auto">
+          <Box as="header">
+            <Box />
+            <Navigation />
+          </Box>
+          <Box as="main">{children}</Box>
+          <Box as="footer">Footer</Box>
+          </Box>
+        </Providers>
+        </body>
     </html>
   )
 }
