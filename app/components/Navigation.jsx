@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Box, Link as ChakraLink } from "@chakra-ui/react"
+import { Button, Box, Link as ChakraLink } from "@chakra-ui/react"
 
 const link = [
   { url: "/", label: 'Inicio', id: 'inicio'},
@@ -10,8 +10,9 @@ const link = [
 const Navigation = () => {
   return (
     <Box as="nav">
+      <Button>Login</Button>
       {
-        link.map(({ url, label, id}) => <ChakraLink as={Link} key={id} href={url} fontSize="md" p="3">{label}</ChakraLink>)
+        link.map(({ url, label, id}) => <ChakraLink color="brand" as={Link} key={id} href={url} fontSize="md" p="3">{label}</ChakraLink>)
       }
     </Box>
   )

@@ -13,12 +13,12 @@ export default function RootLayout({ children }) {
       <body>
         <Providers>
           <Box maxWidth="1200px" ml="auto" mr="auto">
-          <Box as="header">
-            <Box />
-            <Navigation />
-          </Box>
-          <Box as="main">{children}</Box>
-          <Box as="footer">Footer</Box>
+            <Box as="header">
+              <Box />
+              <Navigation />
+            </Box>
+            <Box as="main">{children}</Box>
+            <Box as="footer">Footer</Box>
           </Box>
         </Providers>
         </body>

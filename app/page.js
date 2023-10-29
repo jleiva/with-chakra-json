@@ -9,8 +9,14 @@ export default async function Home() {
   
   return (
     <Box>
-      <Heading as="h1">{data.title}</Heading>
+      <Heading as="h1" fontSize="md">{data.title}</Heading>
       <Text>{data.content}</Text>
+      <Box display="flex" justifyContent="space-around" flexWrap={{ base: 'wrap' }}>
+        <Box bg="blue.400" w="200px" h="200px"></Box>
+        <Box bg="blue.400" w="200px" h="200px"></Box>
+        <Box bg="blue.400" w="200px" h="200px"></Box>
+        <Box bg="blue.400" w="200px" h="200px"></Box>
+      </Box>
     </Box>
   )
 }
